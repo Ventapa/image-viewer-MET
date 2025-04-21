@@ -75,21 +75,6 @@ Key patterns:
 4. Run on a device or emulator with internet access.
 5. Tap **Load Images** to start browsing MET artworks!
 
----
-
-## 🤝 Contributing
-
-Feel free to fork and submit pull requests. Suggestions:
-
-- Add local caching (Room)
-- Implement endless scrolling
-- Show detailed view for each artwork
-
----
-
-## 📄 License
-
-This project is released under the MIT License.
 
 ## 📄 User FLow
 ```mermaid
