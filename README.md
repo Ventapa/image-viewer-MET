@@ -1,7 +1,4 @@
----
-config:
-  theme: mc
----
+```mermaid
 flowchart TD
   Start([App Launch])
   Start --> Idle[Show Load MET Images button]
@@ -13,12 +10,9 @@ flowchart TD
   Images --> UpdateState[ViewModel updates\n_images + _isLoading = false]
   UpdateState --> Render[Compose LazyColumn displays\nimages, titles, credits]
   Render --> Idle
+```
 
----
-config:
-  theme: mc
-  look: neo
----
+```mermaid
 flowchart LR
   subgraph UI_Layer["UI Layer"]
     A[MainActivity - Compose UI]
@@ -39,3 +33,4 @@ flowchart LR
   C -->|invokes| D
   D -->|deserializes to| E
   D -->|HTTP requests| F
+```
