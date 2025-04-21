@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace "com.example.metimageviewer"      // ← added here
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.metimageviewer"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.10.1"
+  implementation "androidx.activity:activity-compose:1.7.2"
+  implementation "androidx.compose.ui:ui:$compose_version"
+  implementation "androidx.compose.material:material:$compose_version"
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1"
+// Moshi core
+implementation "com.squareup.moshi:moshi:1.15.0"
+// Moshi Kotlin reflection support
+implementation "com.squareup.moshi:moshi-kotlin:1.15.0"
+// Retrofit converter
+implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+  implementation "com.squareup.retrofit2:retrofit:2.9.0"
+
+  implementation "io.coil-kt:coil-compose:2.4.0"
+  implementation "com.google.android.material:material:1.9.0"
+}
